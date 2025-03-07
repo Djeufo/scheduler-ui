@@ -63,22 +63,38 @@ body {
   }
 }
 
-/* login and registration buttons*/
-.login_button, .register_button{
-  margin-left: 30%;
+/* login and registration buttons */
+
+.button_container {
+  display: flex;
+  justify-content: center; /* Centers horizontally */
+  gap: 15px; /* Optional, adds space between buttons */
+  flex-wrap: wrap; /* Allow buttons to wrap to the next line when space is tight */
+}
+
+.login_button, .register_button {
   width: 40%;
   font-size: 30px;
   border-radius: 25px;
-  text-align:center;
-  border: 3px solid rgba(196, 2, 255, 0.2);
-  
+  text-align: center;
+  padding: 10px; /* Optional: for better padding inside the buttons */
+  box-sizing: border-box; /* Ensure padding and border are included in width */
 }
- 
-@media screen and (max-width: 600px) {
-  .button,.login_button, .register_button {
-      width: 100%;  
-      font-size: 20px;  
-      margin-left: 0%;
-      border-radius: 1px;
+
+/* Responsive styles for smaller screens */
+@media (max-width: 768px) {
+  .login_button, .register_button {
+    width: 95%; /* Buttons take up more width on smaller screens */
+    font-size: 24px; /* Smaller font size for smaller screens */
+    margin-bottom: 10px; /* Add spacing between buttons vertically */ 
+    border-radius: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .login_button, .register_button {
+    width: 95%; /* Buttons take up full width on very small screens */
+    font-size: 20px; /* Further reduce font size for very small screens */
+    margin-bottom: 10px; /* Add spacing between buttons vertically */
   }
 }

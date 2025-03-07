@@ -3,10 +3,13 @@
 <head>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 <!-- Link to external CSS file -->
 <link rel="stylesheet" href="css/indexStyle.css">
 <link rel="stylesheet" href="css/home/loginStyle.css">
 <link rel="stylesheet" href="css/home/registrationStyle.css">
+<link rel="stylesheet" href="css/home/footerStyle.css">
 </head>
 <body>
 
@@ -23,11 +26,11 @@
     <h3>Welcome to the our platform in one click make a single post in all your social media pages</h3>
 
 
-
+<div class="button_container">
 <button onclick="document.getElementById('id01').style.display='block'" class="login_button">Login</button>
-<p>&emsp;&emsp;</p>
-<button onclick="document.getElementById('id02').style.display='block'" class="register_button">Register</button>
 
+<button onclick="document.getElementById('id02').style.display='block'" class="register_button">Register</button>
+</div>
     <div id="id01" class="modal">
   
         <form class="modal-content animate" action="/action_page.php" method="post">
@@ -91,6 +94,21 @@
     </div>
   
 
+
+<footer>
+
+    <div class="our_social_media_link">
+        <a href="https://www.youtube.com/@Tecbisi" class="fa fa-facebook"></a>
+        <a href="https://www.youtube.com/@Tecbisi" class="fa fa-google"></a>
+        <a href="https://www.youtube.com/@Tecbisi" class="fa fa-youtube"></a>
+        <a href="https://www.youtube.com/@Tecbisi" class="fa fa-instagram"></a>
+        <a href="https://www.youtube.com/@Tecbisi" class="fa fa-linkedin"></a>
+    </div>
+</footer>
+
+
+<!-- Link to external javascript file -->
 <script src="js/indexScript.js"></script>
+
 </body>
 </html>
