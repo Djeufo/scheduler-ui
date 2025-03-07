@@ -43,7 +43,7 @@ body {
 }
 
 .header a.active {
-  background-color: dodgerblue;
+  background-color: rgb(173, 30, 255);
   color: white;
 }
 
@@ -63,12 +63,20 @@ body {
   }
 }
 
-
-
-/*---------------css body*/
-
-/*login--css*/
-
-/*-end---------------body*/
-/*css footer*/
-
+/* login and registration buttons*/
+.login_button, .register_button{
+  margin-left: 30%;
+  width: 40%;
+  font-size: 30px;
+  border-radius: 25px;
+  text-align:center;
+}
+ 
+@media screen and (max-width: 600px) {
+  .button,.login_button, .register_button {
+      width: 100%;  
+      font-size: 20px;  
+      margin-left: 0%;
+      border-radius: 1px;
+  }
+}
