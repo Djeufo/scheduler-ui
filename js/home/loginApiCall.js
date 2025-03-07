@@ -20,8 +20,19 @@
                 success: function(response) {
                     // Handle success
                     console.log('Login successful:', response);
+
+                    // Store user data in localStorage to redirect them to userPage
+                    localStorage.setItem('userData', JSON.stringify({
+                        uuid: response.uuid,
+                        userName: response.userName,
+                        email: response.email,
+                        startValidity: response.startValidity,
+                        connectedPlatforms: response.connectedPlatforms
+                    }));
+
                     // You can handle the response here (e.g., redirect, show a message)
-                    alert('Login successful!');
+                    //alert('Login successful!');
+                    window.location.href = './userPage/userPage.html'; // Redirect to profile page
                 },
                 error: function(xhr, status, error) {
                     // Handle error

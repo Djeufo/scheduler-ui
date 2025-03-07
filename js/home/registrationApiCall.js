@@ -31,6 +31,18 @@ $(document).ready(function() {
                 console.log(response);
                 alert("Registration successful!");
                 document.getElementById('id02').style.display = 'none'; // Close modal
+
+                // Store user data in localStorage to redirect them to userPage
+                localStorage.setItem('userData', JSON.stringify({
+                    uuid: response.uuid,
+                    userName: response.userName,
+                    email: response.email,
+                    startValidity: response.startValidity,
+                    connectedPlatforms: response.connectedPlatforms
+                }));
+
+                
+                window.location.href = './userPage/userPage.html'; // Redirect to profile page
             },
             error: function(xhr, status, error) {
                 console.error('XHR:', xhr);
