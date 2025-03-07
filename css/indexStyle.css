@@ -98,3 +98,70 @@ body {
     margin-bottom: 10px; /* Add spacing between buttons vertically */
   }
 }
+
+
+
+/* Basic styles */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #cfcfcf;
+}
+
+.logo {
+  font-size: 24px;
+  color: white;
+  text-decoration: none;
+}
+
+.header-right a {
+  color: rgb(16, 7, 7);
+  text-decoration: none;
+  padding: 10px;
+}
+
+.header-right a.active {
+  background-color: #55a370;
+}
+
+/* Hide menu items on small screens by default */
+.header-right {
+  display: flex;
+}
+
+.menu-icon {
+  display: none;
+  font-size: 40px;
+  color: rgb(10, 60, 2);
+  cursor: pointer;
+}
+
+/* Media query for screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .header-right {
+    display: none;
+    flex-direction: column;
+    width: 100%;
+    position: absolute;
+    top: 50px;
+    left: 0;
+    background-color: #a8a8a8;
+    text-align: center;
+  }
+
+  .header-right a {
+    padding: 15px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+
+  .menu-icon {
+    display: block;
+  }
+
+  .header-right.show {
+    display: flex;
+  }
+}
