@@ -5,6 +5,8 @@
 
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
 <!-- Link to external CSS file -->
 <link rel="stylesheet" href="css/indexStyle.css">
 <link rel="stylesheet" href="css/home/loginStyle.css">
@@ -34,33 +36,32 @@
 
 <button onclick="document.getElementById('id02').style.display='block'" class="register_button">Register</button>
 </div>
-    <div id="id01" class="modal">
-  
-        <form class="modal-content animate" action="/action_page.php" method="post">
-          <div class="imgcontainer">
-            <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
-            <img src="img_avatar2.png" alt="Avatar" class="avatar">
-          </div>
-      
-          <div class="container">
-            <label for="uname"><b>Username</b></label>
-            <input type="text" placeholder="Enter Username" name="uname" required>
-      
-            <label for="psw"><b>Password</b></label>
-            <input type="password" placeholder="Enter Password" name="psw" required>
-              
-            <button type="submit">Login</button>
-            <label>
-              <input type="checkbox" checked="checked" name="remember"> Remember me
-            </label>
-          </div>
-      
-          <div class="container" style="background-color:#f1f1f1">
-            <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-            <span class="psw">Forgot <a href="#">password?</a></span>
-          </div>
-        </form>
+<div id="id01" class="modal">
+  <form class="modal-content animate" id="loginForm">
+      <div class="imgcontainer">
+          <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
+          <img src="img_avatar2.png" alt="Avatar" class="avatar">
       </div>
+
+      <div class="container">
+          <label for="uname"><b>Username</b></label>
+          <input type="text" id="uname" placeholder="Enter Username" name="uname" required>
+
+          <label for="psw"><b>Password</b></label>
+          <input type="password" id="psw" placeholder="Enter Password" name="psw" required>
+            
+          <button type="submit">Login</button>
+          <label>
+              <input type="checkbox" checked="checked" name="remember"> Remember me
+          </label>
+      </div>
+
+      <div class="container" style="background-color:#f1f1f1">
+          <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
+          <span class="psw">Forgot <a href="#">password?</a></span>
+      </div>
+  </form>
+</div>
 
     <div id="id02" class="modal">
         <form class="modal-content animate" action="/action_page.php" method="post">
@@ -113,6 +114,7 @@
 
 <!-- Link to external javascript file -->
 <script src="js/indexScript.js"></script>
+<script src="js/loginApiCall.js"></script>
 
 </body>
 </html>
