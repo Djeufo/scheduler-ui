@@ -43,7 +43,7 @@ body {
 }
 
 .header a.active {
-  background-color: rgb(173, 30, 255);
+  background-color: rgb(52, 138, 65);
   color: white;
 }
 
@@ -70,6 +70,8 @@ body {
   font-size: 30px;
   border-radius: 25px;
   text-align:center;
+  border: 3px solid rgba(196, 2, 255, 0.2);
+  
 }
  
 @media screen and (max-width: 600px) {
