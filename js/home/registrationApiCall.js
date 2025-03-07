@@ -29,7 +29,7 @@ $(document).ready(function() {
             }), // Send the data as a JSON string
             success: function(response) {
                 console.log(response);
-                alert("Registration successful!");
+                //alert("Registration successful!");
                 document.getElementById('id02').style.display = 'none'; // Close modal
 
                 // Store user data in localStorage to redirect them to userPage
