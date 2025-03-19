@@ -78,3 +78,58 @@ body {
     width: 100%;
   }
 }
+
+/* Flex container for username display and buttons */
+.username-container {
+  display: flex;
+  flex-direction: column; /* Stack elements vertically */
+  justify-content: center; /* Center align the content */
+  /*align-items: center; /* Horizontally center the content */
+  background-color: #f0f0f0; /* Grey background */
+  padding: 20px;
+  border-radius: 8px; /* Rounded corners for the div */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect */
+  width: 100%; /* Allow the container to scale with screen size */
+  max-width: 400px; /* Maximum width for larger screens */
+  margin: auto; /* Center the div horizontally */
+}
+
+/* Button and input styling */
+button {
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #007bff; /* Blue color for the buttons */
+  color: white;
+  border: none;
+  border-radius: 4px; /* Rounded corners for buttons */
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+input {
+  margin-top: 10px;
+  padding: 8px;
+  border-radius: 4px;
+  border: 1px solid #ccc;
+  width: 80%; /* Make input field responsive */
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+  .username-container {
+    width: 90%; /* Take up more width on smaller screens */
+    padding: 15px;
+  }
+
+  input {
+    width: 100%; /* Full width for input on small screens */
+  }
+
+  button {
+    width: 100%; /* Make buttons full width for small screens */
+  }
+}
