@@ -1,35 +1,80 @@
+button:hover,
+a:hover {
+  opacity: 0.7;
+}
+
+/* Global styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f4f4f4;
+  display: flex;
+  justify-content: center;
+}
+
+/* Card styling */
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-    max-width: 300px;
-    margin: auto;
-    text-align: center;
-    font-family: arial;
+  width: 90%;
+  max-width: 1200px;
+  margin: 20px auto;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  text-align: center;
+}
+
+.card img {
+  width: 100%;
+  height: auto;
+}
+
+.card h1 {
+  font-size: 24px;
+  margin: 15px 0;
+}
+
+.card .title {
+  font-size: 18px;
+  color: gray;
+}
+
+.card p {
+  font-size: 16px;
+  color: #555;
+}
+
+.card .social-icons a {
+  text-decoration: none;
+  color: #555;
+  margin: 0 10px;
+  font-size: 20px;
+}
+
+.card button {
+  padding: 10px 20px;
+  background-color: #4caf50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+/* Responsive Design for Small Devices */
+@media screen and (max-width: 768px) {
+  .card {
+    width: 95%;
+    padding: 20px;
   }
-  
-  .title {
-    color: grey;
-    font-size: 18px;
-  }
-  
-  button {
-    border: none;
-    outline: 0;
-    display: inline-block;
-    padding: 8px;
-    color: white;
-    background-color: #000;
-    text-align: center;
-    cursor: pointer;
-    width: 100%;
-    font-size: 18px;
-  }
-  
-  a {
-    text-decoration: none;
+  .card h1 {
     font-size: 22px;
-    color: black;
   }
-  
-  button:hover, a:hover {
-    opacity: 0.7;
+  .card .title {
+    font-size: 16px;
   }
+  .card button {
+    width: 100%;
+  }
+}
