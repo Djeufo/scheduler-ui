@@ -1,5 +1,5 @@
 // Default username
-let updateUserDataPath = "http://localhost:8080/v1/auth/update";
+let updateUserDataPath = "http://localhost:8080/v1/user/update";
 let defaultUsername;
 let userUuid;
 
@@ -42,6 +42,9 @@ document.getElementById("update-button").addEventListener("click", function () {
 // Handle Save button click
 document.getElementById("save-button").addEventListener("click", function () {
   let newUsername = document.getElementById("username-input").value;
+  let email = null;
+  let newPassword = null;
+  let password = null;
 
   // Make sure the username is not empty
   if (newUsername.trim() === "") {
@@ -49,23 +52,32 @@ document.getElementById("save-button").addEventListener("click", function () {
     return;
   }
 
-  // Make the AJAX POST request to update the username along with uuid
-  const xhr = new XMLHttpRequest();
-  xhr.open("POST", updateUserDataPath, true);
-  xhr.setRequestHeader("Content-Type", "application/json");
+  $.ajax({
+    url: "http://localhost:8080/v1/user/auth/update", // The URL to send the request to
+    type: "POST", // The HTTP method
+    contentType: "application/json", // The content type to send
+    data: JSON.stringify({
+      username: newUsername,
+      email: email,
+      newPassword: password,
+      oldPassword: password,
+    }), // The data to send, ensure you send newUsername here
 
-  xhr.onreadystatechange = function () {
-    if (xhr.readyState === XMLHttpRequest.DONE) {
-      if (xhr.status === 200) {
-        // If the request is successful, update the displayed username
-        defaultUsername = newUsername;
-        document.getElementById("user-display").textContent = defaultUsername;
-        alert("Username updated successfully!");
-      } else {
-        alert("Failed to update the username. Please try again.");
-      }
-    }
-  };
+    success: function (response) {
+      // If the request is successful, update the displayed username
+      defaultUsername = newUsername;
+      document.getElementById("user-display").textContent = defaultUsername;
+      alert("Updated successfully!");
+    },
+
+    error: function (xhr, status, error) {
+      console.error("XHR:", xhr);
+      console.error("Status:", status);
+      console.error("Error:", error);
+      // If the request fails, show an error message
+      alert("Failed to update your data. Please try again.");
+    },
+  });
 
   // Sending both username and uuid in the request body
   const data = JSON.stringify({
@@ -79,3 +91,4 @@ document.getElementById("save-button").addEventListener("click", function () {
   document.getElementById("save-button").style.display = "none";
   document.getElementById("update-button").style.display = "inline-block";
 });
+/**/
