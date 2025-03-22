@@ -1,16 +1,20 @@
 body {
-    font-family: Arial, Helvetica, sans-serif;
-    background-color: rgb(255, 255, 255);
-  }
-  
-  /*css header*/
-  h1,h2,p {
-    text-align: center;
-  }
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: rgb(255, 255, 255);
+}
 
-  * {box-sizing: border-box;}
+/*css header*/
+h1,
+h2,
+p {
+  text-align: center;
+}
 
-body { 
+* {
+  box-sizing: border-box;
+}
+
+body {
   margin: 0;
   font-family: Arial, Helvetica, sans-serif;
 }
@@ -27,7 +31,7 @@ body {
   text-align: center;
   padding: 12px;
   text-decoration: none;
-  font-size: 18px; 
+  font-size: 18px;
   line-height: 25px;
   border-radius: 4px;
 }
@@ -57,7 +61,7 @@ body {
     display: block;
     text-align: left;
   }
-  
+
   .header-right {
     float: none;
   }
@@ -72,7 +76,8 @@ body {
   flex-wrap: wrap; /* Allow buttons to wrap to the next line when space is tight */
 }
 
-.login_button, .register_button {
+.login_button,
+.register_button {
   width: 40%;
   font-size: 30px;
   border-radius: 25px;
@@ -83,23 +88,23 @@ body {
 
 /* Responsive styles for smaller screens */
 @media (max-width: 768px) {
-  .login_button, .register_button {
+  .login_button,
+  .register_button {
     width: 95%; /* Buttons take up more width on smaller screens */
     font-size: 24px; /* Smaller font size for smaller screens */
-    margin-bottom: 10px; /* Add spacing between buttons vertically */ 
+    margin-bottom: 10px; /* Add spacing between buttons vertically */
     border-radius: 10px;
   }
 }
 
 @media (max-width: 480px) {
-  .login_button, .register_button {
+  .login_button,
+  .register_button {
     width: 95%; /* Buttons take up full width on very small screens */
     font-size: 20px; /* Further reduce font size for very small screens */
     margin-bottom: 10px; /* Add spacing between buttons vertically */
   }
 }
-
-
 
 /* Basic styles */
 .header {
